@@ -1,0 +1,174 @@
+body{
+  background-color: black;
+}
+
+
+.title{
+    font-size: 6em;
+    font-family: 'Orbitron', sans-serif;
+    color: lightblue;
+    border-right: .1px solid black;
+    width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+          typing 5s steps(10),
+          curor 0.4s step-end infinite alternate;
+
+  
+}
+@keyframes cursor{
+  50% { border-color: transparent;}
+}
+@keyframes typing{
+  from{ width: 0;}
+}
+.page{
+ /* display: inline-block;
+  */display: flex ;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/asset/space-mission.jpg);
+  background-size: cover;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+img{
+  width: 450px;
+  height: 450px;
+}
+a {
+   color: #00c3ff;
+   text-decoration: none;
+   font-weight: bold;
+   transition: transform 0.3s ease;
+}
+a:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 10px #00c3ff;
+}
+.banner{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}    
+
+#page1{
+    background-image: url(/asset/cov5.jpg);
+}
+#page2{
+    background-image: url(/asset/cov2.png);
+}
+#page3{
+    background-image: url(/asset/cov3.JPG);
+}
+#page4{
+    background-image: url(/asset/cov4.jpg);
+}
+#page5{
+    background-image: url(/asset/moonbg1.jpg);
+}
+#page6{
+    background-image: url(/asset/marbg.jpg);
+}
+#page7{
+    background-image: url(/asset/moonbg2.jpg);
+}
+#page8{
+    height: 100vh;
+    background-image: url(/asset/backsun.jpeg);
+}
+
+.container{
+  display: flex;
+  flex-direction: row;/*left to right */
+  justify-content: space-evenly;/* aling karta hai  main axis per , horizontal in this case*/
+  align-items: center; /*top to bottom */
+}
+img{
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00c3ff;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+      transform: scale(1.05);
+}
+
+
+ 
+.boxT {
+   width: 450px;
+  height: 450px;
+  background-color: rgba(72, 72, 248, 0.1); 
+  backdrop-filter: blur(5px);
+  background-image: linear-gradient(
+    120deg ,
+    rgba(9, 9, 9, 0.3),
+    rgba(255, 255, 255, 0.2)
+   );
+  background-size:30px 30px ;
+  padding: 30px 30px;
+
+
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contain .boxI{
+    width: 500px;
+    height: 500px;
+    
+}
+
+.boxI.autoshow {
+  animation: imageShow 0.8s ease-out both;
+  animation-timeline: view(80% 10%);
+}
+@keyframes imageShow {
+  from {
+    opacity: 0;
+    transform: scale(0.3) translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+.BoxT.autoshow {
+  animation: textShow 1.2s ease-out 0.4s both;
+  animation-timeline: view(85% 10%);
+}
+
+@keyframes textShow {
+  from {
+    opacity: 0;
+    transform: translateX(150px) scale(0.9);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+
+
+
+
+
+
+
